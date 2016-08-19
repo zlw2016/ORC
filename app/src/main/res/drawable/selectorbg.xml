@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!-- 按下Button时显示对应的图片-->
+    <item android:state_pressed="true" android:drawable="@drawable/selector_pressed" />
+    <!--焦点在Button上时显示对应图片-->
+    <item android:state_focused="true" android:drawable="@drawable/selector_pressed" />
+    <!--可用状态即常见状态下显示对应的图片-->
+    <item android:state_enabled="true" android:drawable="@drawable/selector" />
+    <item android:drawable="@drawable/selector" />
+</selector>

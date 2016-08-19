@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <com.ngm.ocr.ui.AutoCardView
+            android:id="@+id/v1"
+            android:layout_width="match_parent"
+            android:layout_height="120px"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="32px"
+            android:layout_marginRight="32px"
+            app:cardBackgroundColor="#ffffff"
+            app:cardCornerRadius="8px"
+            app:cardElevation="4px"
+            app:cardPreventCornerOverlap="false"
+            app:cardUseCompatPadding="false"
+            app:contentPadding="4px">
+
+                <ImageView
+                    android:id="@+id/v2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/firearms_06" />
+
+        </com.ngm.ocr.ui.AutoCardView>
+
+        <com.ngm.ocr.ui.AutoCardView
+            android:id="@+id/v3"
+            android:layout_width="match_parent"
+            android:layout_height="96px"
+            android:layout_below="@+id/v1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="32px"
+            android:layout_marginRight="32px"
+            android:layout_marginTop="48px"
+            app:cardBackgroundColor="#81A7CC"
+            app:cardCornerRadius="8px"
+            app:cardElevation="4px"
+            app:cardPreventCornerOverlap="false"
+            app:cardUseCompatPadding="false"
+            app:contentPadding="0px"
+            app:selectbg="#3786B8">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/selectorbg">
+
+                <com.ngm.ocr.ui.TextViewCustom
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="32px"
+                    android:layout_toRightOf="@id/v4"
+                    android:text="开始识别"
+                    android:textColor="@color/white"
+                    android:textSize="20px"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </com.ngm.ocr.ui.AutoCardView>
+
+    </RelativeLayout>
+
+</FrameLayout>

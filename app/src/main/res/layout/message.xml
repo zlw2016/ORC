@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#00000000">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="#81A7CC"
+        android:layout_marginLeft="32px"
+        android:layout_marginRight="32px"
+        android:paddingBottom="16px"
+        android:paddingLeft="32px"
+        android:paddingRight="32px"
+        android:paddingTop="16px">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+
+            <com.ngm.ocr.ui.TextViewCustom
+                android:id="@+id/msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="#00000000"
+                android:paddingLeft="16px"
+                android:text="Loading..."
+                android:textColor="#646464"
+                android:textSize="16px"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </RelativeLayout>
+</com.zhy.autolayout.AutoRelativeLayout>
