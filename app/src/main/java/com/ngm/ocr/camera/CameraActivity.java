@@ -59,7 +59,6 @@ public class CameraActivity extends Activity implements CameraInterface.CamOpenO
         p2.width = DisplayUtil.dip2px(this, 80);
         p2.height = DisplayUtil.dip2px(this, 80);
         shutterBtn.setLayoutParams(p2);
-
     }
 
     @Override
@@ -107,9 +106,5 @@ public class CameraActivity extends Activity implements CameraInterface.CamOpenO
             }
         }
     }
-
-
-
-
 
 }

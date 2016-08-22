@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dialogplus_outmost_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/none">
+
+    <com.ngm.ocr.ui.AutoCardView
+        android:id="@+id/v2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/v1"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="24px"
+        android:layout_marginRight="24px"
+        android:layout_marginTop="48px"
+        app:cardBackgroundColor="#81A7CC"
+        app:cardCornerRadius="8px"
+        app:cardElevation="4px"
+        app:cardPreventCornerOverlap="false"
+        app:cardUseCompatPadding="false"
+        app:contentPadding="0px">
+
+        <RelativeLayout
+            android:id="@+id/v3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/selectorbg">
+
+            <ListView
+                android:id="@+id/dialogplus_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:divider="@drawable/xu"
+                android:dividerHeight="5dp"
+                android:paddingLeft="16px"
+                android:paddingRight="16px"
+                android:paddingBottom="0px"
+                android:paddingTop="0px"
+                android:layout_margin="0dp"
+                android:layerType="software" />
+
+        </RelativeLayout>
+    </com.ngm.ocr.ui.AutoCardView>
+
+</RelativeLayout>
+

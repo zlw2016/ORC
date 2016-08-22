@@ -1,13 +1,16 @@
 package com.ngm.ocr.util;
 
 import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Environment;
 import android.util.Log;
 
 import com.ngm.ocr.AppContext;
 
+import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
@@ -56,8 +59,32 @@ public class FileUtil {
             Log.i(TAG, "saveBitmap:失败");
             e.printStackTrace();
         }
-
     }
 
-
+    public static String savefile(Uri uri) {
+        String sourceFilename = uri.getPath();
+        long dataTake = System.currentTimeMillis();
+        String destinationFilename = android.os.Environment.getExternalStorageDirectory().getPath() + File.separatorChar + "OCR" + File.separatorChar + "img" + File.separatorChar + dataTake + ".jpg";
+        BufferedInputStream bis = null;
+        BufferedOutputStream bos = null;
+        try {
+            bis = new BufferedInputStream(new FileInputStream(sourceFilename));
+            bos = new BufferedOutputStream(new FileOutputStream(destinationFilename, false));
+            byte[] buf = new byte[1024];
+            bis.read(buf);
+            do {
+                bos.write(buf);
+            } while (bis.read(buf) != -1);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (bis != null) bis.close();
+                if (bos != null) bos.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        return destinationFilename;
+    }
 }

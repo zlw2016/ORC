@@ -52,7 +52,8 @@
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="32px"
                     android:layout_toRightOf="@id/v4"
-                    android:text="枪械识别"
+                    android:hint="枪械类别"
+                    android:textColorHint="@color/white"
                     android:textColor="@color/white"
                     android:textSize="20px"
                     android:textStyle="bold" />
@@ -91,13 +92,15 @@
                 android:background="@drawable/selectorbg">
 
                 <com.ngm.ocr.ui.TextViewCustom
+                    android:id="@+id/v10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="32px"
                     android:layout_toRightOf="@id/v4"
-                    android:text="枪械型号"
+                    android:hint="枪械型号"
+                    android:textColorHint="@color/white"
                     android:textColor="@color/white"
                     android:textSize="20px"
                     android:textStyle="bold" />

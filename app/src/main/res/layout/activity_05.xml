@@ -27,7 +27,7 @@
         android:layout_marginBottom="32px"
         android:layout_marginLeft="16px"
         android:layout_marginRight="16px"
-        android:background="#81A7CC"
-        android:paddingTop="1px" />
+        android:padding="1px"
+        android:background="#81A7CC"/>
 
 </RelativeLayout>

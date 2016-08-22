@@ -6,7 +6,7 @@
     android:background="@color/bg">
 
     <RelativeLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center">
 
@@ -19,16 +19,18 @@
             android:layout_marginRight="32px"
             android:layout_marginTop="24px"
             app:cardBackgroundColor="#ffffff"
-            app:cardCornerRadius="5px"
+            app:cardCornerRadius="8px"
             app:cardElevation="4px"
-            app:contentPadding="2px">
+            app:cardPreventCornerOverlap="false"
+            app:cardUseCompatPadding="false"
+            app:contentPadding="4px">
 
             <ImageView
                 android:id="@+id/v2"
                 android:layout_width="match_parent"
-                android:layout_height="92px"
+                android:layout_height="match_parent"
                 android:layout_centerHorizontal="true"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/firearms_06" />
 
         </com.ngm.ocr.ui.AutoCardView>
@@ -37,13 +39,24 @@
             android:id="@+id/v7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/v1"
+            android:layout_below="@id/v1"
             android:layout_marginLeft="32px"
             android:layout_marginTop="32px"
             android:text="识别结果"
             android:textColor="@color/white"
-            android:textSize="24px" />
+            android:textSize="18px" />
 
+        <com.ngm.ocr.ui.TextViewCustom
+            android:id="@+id/v10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/v1"
+            android:layout_marginRight="32px"
+            android:layout_marginTop="32px"
+            android:text="64式手枪"
+            android:textColor="@color/white"
+            android:textSize="18px" />
 
         <com.ngm.ocr.ui.AutoCardView
             android:id="@+id/v3"
@@ -85,11 +98,41 @@
 
         </com.ngm.ocr.ui.AutoCardView>
 
+
+        <FrameLayout
+            android:id="@+id/v14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/v3"
+            android:layout_marginLeft="32px"
+            android:layout_marginTop="32px">
+
+            <com.ngm.ocr.ui.TextViewCustom
+                android:id="@+id/v12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/v3"
+                android:text="出库时间"
+                android:textColor="@color/white"
+                android:textSize="18px" />
+
+            <com.ngm.ocr.ui.TextViewCustom
+                android:id="@+id/v13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginRight="32px"
+                android:text="2016-08-20 13:56:35"
+                android:textColor="@color/white"
+                android:textSize="18px" />
+
+        </FrameLayout>
+
         <LinearLayout
             android:id="@+id/v4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/v3"
+            android:layout_below="@id/v14"
             android:layout_centerHorizontal="true"
             android:layout_marginLeft="32px"
             android:layout_marginRight="32px"
@@ -123,7 +166,7 @@
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
                         android:layout_centerVertical="true"
-                        android:text="出库"
+                        android:text="编辑"
                         android:textColor="@color/white"
                         android:textSize="20px" />
                 </RelativeLayout>
@@ -160,7 +203,7 @@
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
                         android:layout_centerVertical="true"
-                        android:text="入库"
+                        android:text="删除"
                         android:textColor="@color/white"
                         android:textSize="20px" />
                 </RelativeLayout>
@@ -168,40 +211,6 @@
 
         </LinearLayout>
 
-
-        <com.ngm.ocr.ui.AutoCardView
-            android:id="@+id/v12"
-            android:layout_width="match_parent"
-            android:layout_height="64px"
-            android:layout_below="@id/v4"
-            android:layout_centerHorizontal="true"
-            android:layout_marginLeft="32px"
-            android:layout_marginRight="32px"
-            android:layout_marginTop="24px"
-            app:cardBackgroundColor="@color/none"
-            app:cardCornerRadius="8px"
-            app:cardElevation="4px"
-            app:cardPreventCornerOverlap="false"
-            app:cardUseCompatPadding="false"
-            app:contentPadding="0px"
-            app:selectbg="#3786B8">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_below="@id/v3"
-                android:background="@drawable/selectorbg06">
-
-                <com.ngm.ocr.ui.TextViewCustom
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_centerVertical="true"
-                    android:text="取消"
-                    android:textColor="@color/white"
-                    android:textSize="20px" />
-            </RelativeLayout>
-        </com.ngm.ocr.ui.AutoCardView>
     </RelativeLayout>
 
 </FrameLayout>
